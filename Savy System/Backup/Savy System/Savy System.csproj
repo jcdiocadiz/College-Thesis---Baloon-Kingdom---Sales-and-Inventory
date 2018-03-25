@@ -1,0 +1,841 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4B639B6E-9EA6-48F4-A55D-C002DBE3EC9F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsApplication1</RootNamespace>
+    <AssemblyName>Savy System</AssemblyName>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>D3DFA5D485D87F58670949137AFB326ED4EBD78F</ManifestCertificateThumbprint>
+    <ManifestKeyFile>Savy System_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>true</SignManifests>
+    <SignAssembly>false</SignAssembly>
+    <StartupObject>
+    </StartupObject>
+    <PublishUrl>C:\Users\jc\Desktop\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>Balloon Kingdom Savy System</ProductName>
+    <PublisherName>JC Software Inc.</PublisherName>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Windows\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountPay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountPay.Designer.cs">
+      <DependentUpon>AccountPay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountPaya.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccountPaya.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountRcv.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccountRcv.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReceive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountReceive.Designer.cs">
+      <DependentUpon>AccountReceive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountsPayable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountsPayable.Designer.cs">
+      <DependentUpon>AccountsPayable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountsReceivable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountsReceivable.Designer.cs">
+      <DependentUpon>AccountsReceivable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BalloonKingdomDataSet.cs">
+      <DependentUpon>BalloonKingdomDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BalloonKingdomDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BalloonKingdomDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Category.Designer.cs">
+      <DependentUpon>Category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Choice Lost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Choice Lost.Designer.cs">
+      <DependentUpon>Choice Lost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Choice OR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Choice OR.Designer.cs">
+      <DependentUpon>Choice OR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Choice Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Choice Order.Designer.cs">
+      <DependentUpon>Choice Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Choice PO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Choice PO.Designer.cs">
+      <DependentUpon>Choice PO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Choice Supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Choice Supplier.Designer.cs">
+      <DependentUpon>Choice Supplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChoiceCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChoiceCustomer.Designer.cs">
+      <DependentUpon>ChoiceCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChoiceInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChoiceInventory.Designer.cs">
+      <DependentUpon>ChoiceInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChoiceRefund.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChoiceRefund.Designer.cs">
+      <DependentUpon>ChoiceRefund.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChoiceRentedItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChoiceRentedItem.Designer.cs">
+      <DependentUpon>ChoiceRentedItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChoiceSalesReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChoiceSalesReport.Designer.cs">
+      <DependentUpon>ChoiceSalesReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="COF Printing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="COF Printing.Designer.cs">
+      <DependentUpon>COF Printing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="COF.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>COF.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="COF2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>COF2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Customer Masterlist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer Masterlist.Designer.cs">
+      <DependentUpon>Customer Masterlist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerFname.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerFname.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomerLname.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerLname.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="customersearch.cs" />
+    <Compile Include="Deliver Rental.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Deliver Rental.Designer.cs">
+      <DependentUpon>Deliver Rental.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory Duplicate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory Duplicate.Designer.cs">
+      <DependentUpon>Inventory Duplicate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory Masterlist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory Masterlist.Designer.cs">
+      <DependentUpon>Inventory Masterlist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory Update Permission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory Update Permission.Designer.cs">
+      <DependentUpon>Inventory Update Permission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryAddingDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryAddingDoc.Designer.cs">
+      <DependentUpon>InventoryAddingDoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryID.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventoryID.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ItemName.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ItemName.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ItemStatus.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ItemStatus.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lost Item.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lost Item.Designer.cs">
+      <DependentUpon>Lost Item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lost.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Lost.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LostCOFNo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LostCOFNo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Official Receipt Masterlist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Official Receipt Masterlist.Designer.cs">
+      <DependentUpon>Official Receipt Masterlist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Official Receipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Official Receipt.Designer.cs">
+      <DependentUpon>Official Receipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OfficialReceipt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OfficialReceipt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Order Masterlist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order Masterlist.Designer.cs">
+      <DependentUpon>Order Masterlist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderCOF.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrderCOF.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OrderDate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrderDate.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OrderName.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrderName.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PO Masterlist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PO Masterlist.Designer.cs">
+      <DependentUpon>PO Masterlist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PODate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PODate.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="POF.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POF.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="POF_Printing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POF_Printing.Designer.cs">
+      <DependentUpon>POF_Printing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PONum.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PONum.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="POSuppName.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POSuppName.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PrintCOF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintCOF.Designer.cs">
+      <DependentUpon>PrintCOF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintPO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintPO.Designer.cs">
+      <DependentUpon>PrintPO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RcvPOMasterlist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RcvPOMasterlist.Designer.cs">
+      <DependentUpon>RcvPOMasterlist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receive.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Receive.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReceivePO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceivePO.Designer.cs">
+      <DependentUpon>ReceivePO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RefundMasterlist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RefundMasterlist.Designer.cs">
+      <DependentUpon>RefundMasterlist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RefundView.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RefundView.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rental Checklist M.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rental Checklist M.Designer.cs">
+      <DependentUpon>Rental Checklist M.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rental Checklist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rental Checklist.Designer.cs">
+      <DependentUpon>Rental Checklist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RentalCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RentalCheck.Designer.cs">
+      <DependentUpon>RentalCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RentalMasterlist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RentalMasterlist.Designer.cs">
+      <DependentUpon>RentalMasterlist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Return Rental Item.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Return Rental Item.Designer.cs">
+      <DependentUpon>Return Rental Item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalesMasterlist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesMasterlist.Designer.cs">
+      <DependentUpon>SalesMasterlist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalesReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SearchLastnameDataLayer.cs" />
+    <Compile Include="Security.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Security.Designer.cs">
+      <DependentUpon>Security.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AccountPay.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AccountPay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountPaya.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AccountPaya.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountRcv.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AccountRcv.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReceive.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AccountReceive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountsPayable.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AccountsPayable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountsReceivable.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AccountsReceivable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Category.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Choice Lost.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Choice Lost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Choice OR.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Choice OR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Choice Order.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Choice Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Choice PO.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Choice PO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Choice Supplier.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Choice Supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChoiceCustomer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ChoiceCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChoiceInventory.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ChoiceInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChoiceRefund.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ChoiceRefund.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChoiceRentedItem.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ChoiceRentedItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChoiceSalesReport.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ChoiceSalesReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="COF Printing.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>COF Printing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="COF.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>COF.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="COF2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>COF2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer Masterlist.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Customer Masterlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerFname.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CustomerFname.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerLname.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CustomerLname.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Deliver Rental.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Deliver Rental.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory Duplicate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Inventory Duplicate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory Masterlist.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Inventory Masterlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory Update Permission.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Inventory Update Permission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryAddingDoc.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InventoryAddingDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryID.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>InventoryID.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemName.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ItemName.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemStatus.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ItemStatus.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lost Item.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Lost Item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lost.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Lost.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LostCOFNo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LostCOFNo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Official Receipt Masterlist.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Official Receipt Masterlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Official Receipt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Official Receipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OfficialReceipt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>OfficialReceipt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order Masterlist.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Order Masterlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderCOF.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>OrderCOF.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderDate.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>OrderDate.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderName.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>OrderName.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PO Masterlist.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PO Masterlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PODate.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PODate.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POF.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>POF.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POF_Printing.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>POF_Printing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PONum.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PONum.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POSuppName.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>POSuppName.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintCOF.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PrintCOF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintPO.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PrintPO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RcvPOMasterlist.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RcvPOMasterlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receive.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Receive.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceivePO.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReceivePO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RefundMasterlist.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RefundMasterlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RefundView.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RefundView.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rental Checklist M.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Rental Checklist M.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rental Checklist.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Rental Checklist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RentalCheck.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RentalCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RentalMasterlist.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RentalMasterlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Return Rental Item.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Return Rental Item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesMasterlist.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SalesMasterlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SalesReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Security.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Security.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Savy System.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Savy System.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier Masterlist.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Supplier Masterlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupplierID.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SupplierID.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupplierName.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SupplierName.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update Inventory Quantity.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Update Inventory Quantity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewRental.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ViewRental.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="BalloonKingdomDataSet.xsc">
+      <DependentUpon>BalloonKingdomDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BalloonKingdomDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>BalloonKingdomDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="BalloonKingdomDataSet.xss">
+      <DependentUpon>BalloonKingdomDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Savy System_TemporaryKey.pfx" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Savy System.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Savy System.Designer.cs">
+      <DependentUpon>Savy System.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="Supplier Masterlist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplier Masterlist.Designer.cs">
+      <DependentUpon>Supplier Masterlist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SupplierID.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SupplierID.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SupplierName.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SupplierName.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Update Inventory Quantity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update Inventory Quantity.Designer.cs">
+      <DependentUpon>Update Inventory Quantity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewRental.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ViewRental.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Sql.Server.Express.1.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2005 Express Edition</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

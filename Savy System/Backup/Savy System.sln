@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Savy System", "Savy System\Savy System.csproj", "{4B639B6E-9EA6-48F4-A55D-C002DBE3EC9F}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{5DA4B6A5-7914-4DE9-B5F4-ED9CB238D62E}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Cab1", "Cab1\Cab1.vdproj", "{F7B46FB8-17BC-4841-9CA9-ECCE67D6B019}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4B639B6E-9EA6-48F4-A55D-C002DBE3EC9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B639B6E-9EA6-48F4-A55D-C002DBE3EC9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B639B6E-9EA6-48F4-A55D-C002DBE3EC9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B639B6E-9EA6-48F4-A55D-C002DBE3EC9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DA4B6A5-7914-4DE9-B5F4-ED9CB238D62E}.Debug|Any CPU.ActiveCfg = Debug
+		{5DA4B6A5-7914-4DE9-B5F4-ED9CB238D62E}.Release|Any CPU.ActiveCfg = Release
+		{F7B46FB8-17BC-4841-9CA9-ECCE67D6B019}.Debug|Any CPU.ActiveCfg = Debug
+		{F7B46FB8-17BC-4841-9CA9-ECCE67D6B019}.Debug|Any CPU.Build.0 = Debug
+		{F7B46FB8-17BC-4841-9CA9-ECCE67D6B019}.Release|Any CPU.ActiveCfg = Release
+		{F7B46FB8-17BC-4841-9CA9-ECCE67D6B019}.Release|Any CPU.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
